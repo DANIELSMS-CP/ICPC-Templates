@@ -126,24 +126,11 @@ int gauss_jordan(vector<vector<double>> a,vector<double> &ans)
 signed main()
 {
     fastio();
-    vector<vector<double>> a(5,vector<double>(5,0));
-    for(int i=0;i<5;i++)
-    {
-        for(int j=0;j<5;j++)
-        {
-            cin >> a[i][j];
-        }
-    }
-    vector<double> ans(4,0);
-    for(int i=0;i<4;i++)
-    {
-        cin >> ans[i];
-    }
-    gauss_jordan(a,ans);
-    for(auto i:ans)
-    {
-        cout << fixed << setprecision(5) << i << ' ';
-    }
+    /*
+        Ax=B
+        A is the matrix and B is its last column
+        returns ans
+    */
     
     return 0;
 }
