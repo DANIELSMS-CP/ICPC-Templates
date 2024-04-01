@@ -98,35 +98,6 @@ struct FT
 signed main()
 {
     fastio();
-    int n,q;
-    cin >> n >> q;
-    vector<int> a(n);
-    for(int i=0;i<n;i++)
-    {
-        cin >> a[i];
-    }
-    FT<int> Fenwick_Tree(n+1);
-    for(int i=0;i<n;i++)
-    {
-        Fenwick_Tree.update(i,a[i]);
-    }
-    while(q--)
-    {
-        int type;
-        cin >> type;
-        if(type==0)
-        {
-            int p,x;
-            cin >> p >> x;
-            Fenwick_Tree.update(p,x);
-        }
-        else
-        {
-            int l,r;
-            cin >> l >> r;
-            cout << Fenwick_Tree.query(r-1)-Fenwick_Tree.query(l-1) << '\n';
-        }
-    }
     
     return 0;
 }
