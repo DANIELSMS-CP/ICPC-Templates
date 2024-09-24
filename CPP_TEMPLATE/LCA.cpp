@@ -81,7 +81,7 @@ bool is_ancestor(int u,int v)
     return tin[u]<=tin[v] and tout[u]>=tout[v];
 }
 
-int lca(int u, int v)
+int lca(int u,int v)
 {
     if (is_ancestor(u,v))
         return u;
